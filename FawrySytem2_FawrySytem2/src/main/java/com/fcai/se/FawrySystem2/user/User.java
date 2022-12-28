@@ -2,7 +2,7 @@ package com.fcai.se.FawrySystem2.user;
 
 import org.springframework.stereotype.Component;
 
-@Component
+@Component 
 public class User {
 	private String userName;
 	private String email; 
@@ -21,6 +21,12 @@ public class User {
 		this.email = email;
 		this.password = password;
 	}
+
+	public User(String email, String password) {
+		this.email = email;
+		this.password = password;
+	}
+
 
 //	public int getBalance() {
 //		return balance;

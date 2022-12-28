@@ -2,6 +2,7 @@ package com.fcai.se.FawrySystem2.user;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -26,4 +27,10 @@ public class UserController {
 	public User getuser(@PathVariable("username") String username) {
 		return userBsL.getuser(username); 
 	}
+	
+	@PostMapping(value = "/user/signin")
+	public String Finduser(@RequestBody User user) {
+		return userBsL.Signin(user); 
+	}
+	
 }

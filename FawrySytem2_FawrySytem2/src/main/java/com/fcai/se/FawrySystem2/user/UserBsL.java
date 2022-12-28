@@ -1,5 +1,6 @@
 package com.fcai.se.FawrySystem2.user;
 
+import java.security.PublicKey;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -35,5 +36,14 @@ public class UserBsL {
 			}
 		}
 		return null;
+	}
+	
+	public String Signin(User user) {
+		for (User iuser : users) {
+			if(iuser.getEmail().equalsIgnoreCase(user.getEmail())) {
+				return "Sign in Successfully.."; 
+			}
+		}
+		return "There is no account with this email.."; 
 	}
 }
