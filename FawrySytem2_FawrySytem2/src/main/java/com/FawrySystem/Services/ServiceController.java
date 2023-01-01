@@ -22,11 +22,11 @@ public class ServiceController {
 		paymentTransactionBsL = new PaymentTransactionBsL();
 	}
 
-	@PostMapping(value = "/user/services")
-	public String chooseservices(@RequestBody PaymentTransaction paymentTransaction) { 
-		return servicesBsL.getInfoFromTransaction(paymentTransaction); 
-		
-	}
+//	@PostMapping(value = "/user/services")
+//	public String chooseservices(@RequestBody PaymentTransaction paymentTransaction) { 
+//		return servicesBsL.getInfoFromTransaction(paymentTransaction); 
+//		
+//	}
 	
 	@PostMapping(value = "/user/addTransaction")
 	public String addTransaction(@RequestBody PaymentTransaction paymentTransaction) {
