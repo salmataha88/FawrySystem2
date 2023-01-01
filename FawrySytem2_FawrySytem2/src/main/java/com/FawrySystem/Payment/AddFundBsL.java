@@ -28,7 +28,7 @@ public class AddFundBsL {
 		if (com.FawrySystem.user.UserBsL.getuser(addFunds.getUsername()) != null) {
 			int newBalance = com.FawrySystem.user.UserBsL.getuser(addFunds.getUsername()).getWallet().getBalance() + addFunds.getFunds();
 			int newcreditBalance = 	com.FawrySystem.user.UserBsL.getuser(addFunds.getUsername()).getCreditCard().getCreditAmount() - addFunds.getFunds();
-			if(newcreditBalance > 0) {
+			if(newcreditBalance >= 0) {
 			com.FawrySystem.user.UserBsL.getuser(addFunds.getUsername()).getCreditCard().setCreditAmount(newcreditBalance);
 			com.FawrySystem.user.UserBsL.getuser(addFunds.getUsername()).getWallet().setBalance(newBalance);
 			Fundslist.add(addFunds);

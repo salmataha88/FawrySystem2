@@ -44,10 +44,10 @@ public class PaymentBsL {
 					 result = iPayment.pay(newamount);
 				 }
 				 else if (paymentTransaction.getPaymentMethod().equals("creditcard")) { 
-					 com.FawrySystem.user.UserBsL.getuser(paymentTransaction.getUserName()).getCreditCard().pay(newamount);
+					 result = com.FawrySystem.user.UserBsL.getuser(paymentTransaction.getUserName()).getCreditCard().pay(newamount);
 				 }
 				 else if(paymentTransaction.getPaymentMethod().equals("wallet")) {
-					 com.FawrySystem.user.UserBsL.getuser(paymentTransaction.getUserName()).getWallet().pay(newamount);
+					 result = com.FawrySystem.user.UserBsL.getuser(paymentTransaction.getUserName()).getWallet().pay(newamount);
 				 } 
 				 return  result ;  
 			}
@@ -63,10 +63,10 @@ public class PaymentBsL {
 					 result = iPayment.pay(paymentTransaction.getAmount());
 				 }
 				 else if (paymentTransaction.getPaymentMethod().equals("creditcard")) { 
-					 com.FawrySystem.user.UserBsL.getuser(paymentTransaction.getUserName()).getCreditCard().pay(newamount);
+					 result = com.FawrySystem.user.UserBsL.getuser(paymentTransaction.getUserName()).getCreditCard().pay(newamount);
 				 }
 				 else if(paymentTransaction.getPaymentMethod().equals("wallet")) {
-					 com.FawrySystem.user.UserBsL.getuser(paymentTransaction.getUserName()).getWallet().pay(newamount);
+					 result = com.FawrySystem.user.UserBsL.getuser(paymentTransaction.getUserName()).getWallet().pay(newamount);
 				 } 
 				 return  result ;  
 			}
@@ -81,10 +81,10 @@ public class PaymentBsL {
 					 result = iPayment.pay(paymentTransaction.getAmount());
 				 }
 				 else if (paymentTransaction.getPaymentMethod().equals("creditcard")) { 
-					 com.FawrySystem.user.UserBsL.getuser(paymentTransaction.getUserName()).getCreditCard().pay(newamount);
+					 result = com.FawrySystem.user.UserBsL.getuser(paymentTransaction.getUserName()).getCreditCard().pay(newamount);
 				 }
 				 else if(paymentTransaction.getPaymentMethod().equals("wallet")) {
-					 com.FawrySystem.user.UserBsL.getuser(paymentTransaction.getUserName()).getWallet().pay(newamount);
+					 result = com.FawrySystem.user.UserBsL.getuser(paymentTransaction.getUserName()).getWallet().pay(newamount);
 				 } 
 				 return  result;  
 			}
